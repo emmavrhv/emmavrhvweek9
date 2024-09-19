@@ -19,20 +19,12 @@ See the demo here -> [Demo](https://bpdecap.netlify.app/)
 
 You will need Node JS and Visual Studio Code installed on your computer, a [Github](https://www.github.com) account and a [Netlify](https://www.netlify.com) account (for publishing).
 
-<<<<<<< HEAD
-Installation:
-=======
-#Installation:
->>>>>>> e83149cfef791bcf3f6e57bfa8c0006fa418d833
 
+Installation:
 - Download the repository and determine a rootfolder
 - Run "npm i" to install
 - Run "npm run dev" to run instance on localhost
-<<<<<<< HEAD
 - Run - in a second terminal window - "npx decap-server" from the root directory of the above repository to start up the CMS.
-=======
 - In a second terminal window: Run "npx decap-server" from the root directory of the above repository to start up the CMS.
->>>>>>> e83149cfef791bcf3f6e57bfa8c0006fa418d833
 
-This repository is run localy [More info](https://decapcms.org/docs/working-with-a-local-git-repository/). # Nuxt_decap_students_digitalevaardigheden
-# Nuxt_decap_students_digitalevaardigheden
+This repository is run localy [More info](https://decapcms.org/docs/working-with-a-local-git-repository/). 
