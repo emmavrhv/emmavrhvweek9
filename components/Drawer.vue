@@ -17,15 +17,15 @@
     size="75%"
   >
     <!-- Drawer content goes here -->
-    <div class="flex flex-col h-full">
-    <div class="fixed-top-title pt-20">
+    <div class="flex flex-col h-full ">
+    <div class="">
       <Titleblock />
     </div>
     <div class="flex-1 overflow-auto">
       <Navigations />
     </div>
 
-    <!-- Footer is placed at the bottom of the drawer -->
+    <!-- Footer is placed at the bottom of the drawer -->x
     <div class="mt-auto footer">
       <Footer />
       <UtilNav />
@@ -50,15 +50,7 @@ const direction = ref<DrawerProps['direction']>('rtl')
 }
 
 /* Container for fixed title */
-.fixed-top-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 10;  /* Ensures it stays on top of other elements */
-  padding: 16px; /* Adjust the padding as needed to align the title block */
-}
+
 
 .flex-row {
   display: flex;
