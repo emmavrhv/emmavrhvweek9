@@ -37,13 +37,13 @@ body {
     
     /* Active link */
     .router-link-active {
-    border-bottom: 2px solid rgba(50, 64, 63, 0.2);
+    border-bottom: 1px solid rgba(50, 64, 63, 0.2);
     }
     .dark-mode .router-link-active {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
     .gray-mode .router-link-active {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
     /* input */
     textarea,
