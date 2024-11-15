@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div v-for="(posts, folderName) in folders" :key="folderName" class="pb-1">
+    <div v-for="(posts, folderName) in folders" :key="folderName" class="pb-3">
       <ul>
-        <li v-for="post in posts" :key="post.slug">
-          <NuxtLink :to="post._path" class=" font-bold text-3xl md:text-3xl lg:text-6xl">
+        <li v-for="post in posts" :key="post.slug" class="pb-1 lg:pb-3">
+          <NuxtLink :to="post._path" class="font-bold text-3xl md:text-3xl lg:text-6xl">
             {{ post.title }}
           </NuxtLink>
         </li>
