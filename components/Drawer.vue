@@ -18,7 +18,7 @@
   >
     <!-- Drawer content goes here -->
     <div class="flex flex-col h-full">
-    <div class="fixed-top-title max-w-64 lg:max-w-3/4 pt-20">
+    <div class="fixed-top-title pt-20">
       <Titleblock />
     </div>
     <div class="flex-1 overflow-auto">
