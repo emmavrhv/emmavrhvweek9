@@ -1,43 +1,34 @@
 <template>
-<div>
   <div class="pr-5">
     <Drawer />
   </div>
-  <div class="container mx-auto max-w-4xl space-y-6 h-full mb-20 mt-10">
-    <NuxtLink to="/blog">
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m6.921 12.5l5.793 5.792L12 19l-7-7l7-7l.714.708L6.92 11.5H19v1z"></path></svg>
-      </span>  
-      <span class="text-xs">
-      back to the blog overview
-      </span>
-    </NuxtLink>
-    <h1 class="text-4xl font-bold">
-      {{ post.title }}
-    </h1>
-    <h4 v-if="post.subtitle" class="text-xl font-bold opacity-80">
-      {{ post.subtitle }}
-    </h4>
-    <ContentDoc />
-    <div class="text-xs leading-3">
+
+  <div class="container mb-20 mt-10 animate-fade animate-once animate-delay-[500ms]">
+    <ContentQuery :path="$route.path" find="one" v-slot="{ data }">
+
+      <!-- Render the title of the Markdown file -->
+      <h1 class="text-3xl md:text-3xl lg:text-6xl lg:mb-10 font-bold">{{ data.title }}</h1>
+
+      <!-- Render the description of the Markdown file -->
+      <p class="text-lg md:text-2xl lg:text-xl pb-10 font-bold">{{ data.description }}</p>
+
+      <!-- Render the content using ContentRenderer -->
+      <ContentRenderer :value="data" />
+      <div class="text-xs leading-3">
       <hr> 
-      <p v-if="post.date" class="text-xs opacity-50 hover:opacity-100">last updated on: {{ formatDate(post.date) }}
-            <span v-if="post.author" class="text-xs">authored by: {{ post.author }} </span>
-          </p>
-      <p v-if="post.tags"><ArticleTags /></p> 
+      <p class="text-xs opacity-50 hover:opacity-100">Last update: {{ formatDate(data.date) }}
+      </p>
+      <article v-if="data.tags">
+        <li v-for="(item, index) in data.tags" :key="index" class="pt-2 text-xs opacity-50 hover:opacity-100">
+          <NuxtLink :to="`/tags/${item}`">{{ item }}</NuxtLink>
+        </li>
+      </article>
     </div>
+    </ContentQuery>
   </div>
-</div>  
 </template>
 
 <script setup>
-const route = useRoute()
-const actualPath = route.path.replace(/\/$/, '');
-
-const { data: post } = await useAsyncData(`hello`, () =>
-    queryContent(actualPath).findOne()
-);
-
 // Function to format the date
 function formatDate(date) {
   const options = { year: 'numeric', month: 'long' };

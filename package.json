@@ -23,6 +23,8 @@
     "@yeger/vue-masonry-wall": "^5.0.15",
     "netlify-cms-media-library-uploadcare": "^0.5.10",
     "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-animated": "^1.1.2"
+    "tailwindcss-animated": "^1.1.2",
+    "chart.js": "^4.4.3",
+    "vue-chartjs": "^5.3.1"
   }
 }

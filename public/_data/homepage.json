@@ -1,7 +1,8 @@
 {
-  "homepage_title": "Nuxt Decap / Digitale Vaardigheden ",
+  "homepage_title": "Nuxt Decap ",
   "homepage_subtitle": "subtitle op de homepage",
   "thumbnail": "/img/pierre-chatel-innocenti-2MoEcGNUj-I-unsplash.jpg",
   "body": "",
-  "homepageimage": true
+  "homepageimage": true,
+  "homepageredirect": "/page/2024-09-19-page-one"
 }

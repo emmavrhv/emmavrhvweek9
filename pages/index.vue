@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+const router = useRouter();
 const settings = ref(null);  // Initialize as null for loading state
 const isLoading = ref(true);  // Loading state to show the content only after data is loaded
 const hasError = ref(false);  // Error state to show an error message if data loading fails
@@ -13,6 +14,14 @@ onMounted(async () => {
     }
     const jsonData = await response.json();
     settings.value = jsonData;
+
+    // Redirect if homepageredirect is set
+    if (settings.value.homepageredirect) {
+      router.push(settings.value.homepageredirect);
+    }
+
+    isLoading.value = false;  // Stop loading when data is fetched
+    
     isLoading.value = false;  // Stop loading when data is fetched
   } catch (error) {
     hasError.value = true;  // If there's an error, show the error message

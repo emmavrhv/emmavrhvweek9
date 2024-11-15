@@ -1,15 +1,25 @@
 ---
 layout: default
-title: Blog entry one
+title: Example - blog entry 1
 date: 2024-09-19T13:53:29.431Z
 description: Blog entry one description Lorem ipsum dolor sit amet, consectetur
   adipiscing elit. Donec faucibus facilisis arcu sed gravida. Fusce finibus urna
   vel tempus accumsan.
 thumbnail: /img/pat-krupa-oM9L2V90-i4-unsplash.jpg
 author: Administrator
+numbernavigation: 1
 promoted: "0"
+mainincluded: true
+tags:
+  - Tag 1
+  - Tag 2
+blogincluded: true
 ---
 ##### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus facilisis arcu sed gravida. Fusce finibus urna vel tempus accumsan. Integer semper lorem sit amet velit lacinia, ac malesuada eros laoreet. Nulla eget iaculis odio. Nulla quis elementum neque, a mattis dui. Proin ultrices elementum libero, sed placerat est consectetur venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin tellus tortor, tincidunt non molestie at, sodales sit amet magna. Donec bibendum nunc et sapien pharetra, sit amet dignissim neque rhoncus. Aenean enim nisi, dapibus at tempor vel, dapibus eu diam. Mauris sed nibh in nisl vestibulum rhoncus et placerat eros.
+
+
+
+![](/img/egor-myznik-4LKNEltLkU4-unsplash.jpg)
 
 Vivamus sagittis at metus ac volutpat. In hac habitasse platea dictumst. Phasellus efficitur, magna at mattis molestie, nulla elit placerat massa, eu faucibus tellus massa vitae elit. Integer eu sem lobortis, volutpat justo quis, vulputate nibh. Morbi elementum enim et diam tincidunt, sodales fermentum neque dictum. Aenean vestibulum mi sit amet eleifend consectetur. Aliquam sapien enim, euismod et sodales at, maximus ac diam. Maecenas feugiat, felis eu fermentum congue, purus ex faucibus augue, vel feugiat neque felis quis massa. Cras interdum, dui eget lobortis aliquam, magna dui ultrices eros, vel congue odio leo id ex. Integer ornare aliquet mauris, ut congue felis vestibulum sed. Maecenas porta a turpis vehicula iaculis. Suspendisse fermentum iaculis tortor. Etiam rutrum purus quis sem suscipit tempor. Sed lacinia augue vel erat semper, et blandit nisi ultricies. Sed egestas dolor urna, ut ultrices velit mollis sed.
 
