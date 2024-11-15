@@ -25,5 +25,6 @@ Installation:
 - Run "npm i" to install
 - Run "npm run dev" to run instance on localhost
 - Run - in a second terminal window - "npx decap-server" from the root directory of the above repository to start up the CMS.
+- In a second terminal window: Run "npx decap-server" from the root directory of the above repository to start up the CMS.
 
 This repository is run localy [More info](https://decapcms.org/docs/working-with-a-local-git-repository/). 
