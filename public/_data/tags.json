@@ -1,8 +1,4 @@
-{
-  "tags": [
-    {
-      "name": "tag1",
-      "description": "description tag 1"
-    }
-  ]
-}
+[
+  { "title": "Tag1", "description": "Description for Tag1" },
+  { "title": "Tag2", "description": "Description for Tag2" }
+]
