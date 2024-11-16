@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div class="container">
+    <div class="container mb-20 mt-10">
       <div v-if="post.folder !== 'page'">
         <FolderContent v-if="post.folder" :title="post.title" />
       </div>
@@ -14,22 +14,22 @@
 
 
         <el-carousel height="80vh" indicator-position="none" motion-blur>
-          <el-carousel-item v-for="(item, index) in post.imagegallery.galleryImages" :key="index">
-            <div class="relative h-full flex items-center justify-center">
-              <!-- Show loader until the image is fully loaded -->
-              <div v-if="imageLoading[index]" class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                <p>Loading image...</p>
-              </div>
-              <NuxtImg
-                :src="item"
-                alt="Gallery Image"
-                @load="imageLoaded(index)"
-                @click="openFullscreen(item)"
-                class="w-full h-auto max-h-full object-contain"
-              />
-            </div>
-          </el-carousel-item>
-        </el-carousel>
+    <el-carousel-item v-for="(item, index) in post.imagegallery.galleryImages" :key="index">
+      <div class="relative h-full flex items-center justify-center">
+        <!-- Show loader until the image is fully loaded -->
+        <div v-if="imageLoading[index]" class="absolute inset-0 flex items-center justify-center bg-gray-200">
+          <p>Loading image...</p>
+        </div>
+        <NuxtImg
+          :src="item"
+          alt="Gallery Image"
+          @load="imageLoaded(index)"
+          @click="openFullscreen(item)"
+          class="w-full h-auto max-h-full object-contain"
+        />
+      </div>
+    </el-carousel-item>
+  </el-carousel>
 
 
       </div>
@@ -52,8 +52,8 @@
               <NuxtImg
                 :src="item"
                 alt="Gallery Image"
-                @load="imageLoaded(index)"
                 @click="openFullscreen(item)"
+                @load="imageLoaded(index)"
                 class="cursor-pointer w-full object-cover rounded-md"
               />
             </div>

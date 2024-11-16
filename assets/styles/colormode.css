@@ -38,8 +38,8 @@ body {
     }
     */
     .gray-mode .el-drawer {
-        background-color: rgba(111, 140, 124, 0.95);
-        color: #000000;
+        background-color: rgba(91, 115, 101, 0.95);
+        color: #ebebeb;
     }
     
     /* Active link */
@@ -50,7 +50,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
     .gray-mode .router-link-active {
-    border-bottom: 1px solid rgba(52, 52, 52, 0.5);
+    border-bottom: 1px solid rgba(207, 207, 207, 0.5);
     }
     /* input */
     textarea,
