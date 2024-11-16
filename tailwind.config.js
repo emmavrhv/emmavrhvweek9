@@ -14,6 +14,10 @@ export default {
         gray: 'rgb(128,128,128)',
         backdark: 'rgb(256,256,256)',
         backlight: 'rgb(30,30,30)',
+      },
+      spacing: {
+        '128': '32rem',
+        '256': '64rem',
       }
     }
   },

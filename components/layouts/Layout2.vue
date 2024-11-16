@@ -4,7 +4,7 @@
       <NuxtImg
         v-if="data.thumbnail"
         :src="data.thumbnail"
-        class="w-screen opacity-80 "
+        class="w-screen opacity-80 max-h-screen "
         :alt="`Thumbnail for ${data.title}`"
         format="webp"
         loading="lazy"
