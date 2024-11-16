@@ -1,14 +1,14 @@
 <template>
   <div class="opacity-80 animate-fade animate-once animate-delay-[100ms]">
-    <div class="text-xs lg:text-xl font-bold mt-5">
+    <div class="text-lg lg:text-xl font-bold mt-5">
       {{ settings.site_title }}
     </div>
-    <div class="text-xs lg:text-sm opacity-80">
+    <div class="lg:text-sm opacity-60">
       {{ settings.site_subtitle }}
     </div>
   </div>
 </template>
-
+ 
 <script setup>
 import { ref } from 'vue';
 

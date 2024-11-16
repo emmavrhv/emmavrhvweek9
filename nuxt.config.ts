@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@element-plus/nuxt',
     '@nuxt/image',
+    '@stefanobartoletti/nuxt-social-share'
   ],
 
   content: {
@@ -50,6 +51,14 @@ export default defineNuxtConfig({
   plugins: [
     '@/plugins/global-components.js',
   ],
+
+  // module options
+  socialShare: {
+    baseUrl: 'https://bpedu2425.netlify.app', // required!
+    // other optional module options
+    styled: false,
+    label: true,
+  },
 
   css: [
     '~/assets/styles/colormode.css',
