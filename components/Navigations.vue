@@ -12,6 +12,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import MainNavigation from './global/navs/MainNavigation.vue';
 
 const navigations = ref({});
 // Use useFetch to load the JSON data from the public folder
