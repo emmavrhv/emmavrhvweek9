@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@element-plus/nuxt',
     '@nuxt/image',
+    '@stefanobartoletti/nuxt-social-share'
   ],
 
   content: {
@@ -64,6 +65,15 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     }
+  },
+
+
+  // module options
+  socialShare: {
+    baseUrl: 'https://bpdecapstudents.netlify.app', // required!
+    // other optional module options
+    styled: false,
+    label: true,
   },
 
   devtools: { enabled: true },

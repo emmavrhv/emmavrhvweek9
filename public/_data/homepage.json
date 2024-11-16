@@ -3,5 +3,6 @@
   "homepage_subtitle": "subtitle op de homepage",
   "thumbnail": "/img/pierre-chatel-innocenti-2MoEcGNUj-I-unsplash.jpg",
   "body": "",
-  "homepageimage": true
+  "homepageimage": true,
+  "homepageredirect": "/blog/2024-09-19-blog-entry-one"
 }
