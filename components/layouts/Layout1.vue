@@ -17,6 +17,22 @@
           </article>
         </div>
       </div>
+      <ShareButtons />
+    
+      <!-- SEO metadata -->
+      <!-- Regular Meta Tags -->
+      <Title>{{ data.title }}</Title>
+      <Meta name="description" :content="data.description" />
+      <Meta name="tags" :content="data.tags.join(', ')" />
+      
+      <!-- Open Graph Meta Tags -->
+      <Meta property="og:title" :content="data.title" />
+      <Meta property="og:description" :content="data.description" />
+      <Meta property="og:image" :content="data.thumbnail" /> <!-- Add an image URL here -->
+      <Meta property="og:url" :content="data.url" /> <!-- Add the current URL -->
+      <Meta property="og:type" content="article" /> 
+    
+    
     </div>
   </template>
   
