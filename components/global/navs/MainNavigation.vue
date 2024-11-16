@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div v-for="(posts, folderName) in folders" :key="folderName" class="pb-3">
+    <div v-for="(posts, folderName) in folders" :key="folderName" class="">
       <ul>
         <li v-for="post in posts" :key="post.slug" class="pb-1 lg:pb-3">
-          <NuxtLink :to="post._path" class="font-bold text-3xl md:text-3xl lg:text-6xl">
+          <NuxtLink :to="post._path" class="font-bold text-xl md:text-3xl lg:text-5xl">
             {{ post.title }}
           </NuxtLink>
         </li>
       </ul>
     </div>
-    <hr />
+
   </div>
 </template>
 

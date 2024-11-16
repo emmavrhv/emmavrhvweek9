@@ -53,6 +53,12 @@ collections:
             }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - { label: 'In/Excluded and position in the navigation', name: 'numbernavigation', widget: 'number', value_type: 'int', min: 0, max: 50, step: 1, hint: '0 will exclude this entity from the navigation. The higher the number, the higher this item will be placed in the main navigation. The highest value is 50', required: false }
+      - { label: 'Layout', 
+          name: 'layoutpage', 
+          widget: 'select', 
+          options: ["layout1", "layout2", "layout3"], 
+          required: false, default: ["layout1"]
+          }
       - { label: 'Promoted in lists (experimental)', name: 'promoted', widget: 'number', default: '0', hint: 'The higher the number, the higher this item will be placed in the lists and overviews.', required: false}   
 
   - name: 'blog'
@@ -85,6 +91,12 @@ collections:
            required: false,
            hint: 'Indicate a tag for categorisation.' }
       - { label: 'In/Excluded and position in the navigation', name: 'numbernavigation', widget: 'number', value_type: 'int', min: 0, max: 50, step: 1, hint: '0 will exclude this entity from the navigation. The higher the number, the higher this item will be placed in the main navigation. The highest value is 50', required: false }
+      - { label: 'Layout', 
+          name: 'layoutblog', 
+          widget: 'select', 
+          options: ["layout1", "layout2", "layout3"], 
+          required: false, default: ["layout1"]
+          }
       - { label: 'Promoted in lists (experimental)', name: 'promoted', widget: 'number', default: '0', hint: 'Make this item appear higher in the overview lists.', required: false}
 
   - name: 'collection'
@@ -98,7 +110,6 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'default' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false  }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', hint: 'Date of publication' }
@@ -106,17 +117,23 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
-      - {  label: 'Tags',
-           name: 'tags',
-           widget: 'relation',
-           collection: 'tags',
-           search_fields: ['title'],
-           value_field: 'title',
-           display_fields: ['title'],
-           multiple: true,
-           required: false,
-           hint: 'Indicate a tag for categorisation.' }
+      - { label: 'Tags',
+          name: 'tags',
+          widget: 'relation',
+          collection: 'tags',
+          search_fields: ['title'],
+          value_field: 'title',
+          display_fields: ['title'],
+          multiple: true,
+          required: false,
+          hint: 'Indicate a tag for categorisation.' }    
       - { label: 'In/Excluded and position in the navigation', name: 'numbernavigation', widget: 'number', value_type: 'int', min: 0, max: 50, step: 1, hint: '0 will exclude this entity from the navigation. The higher the number, the higher this item will be placed in the main navigation. The highest value is 50', required: false }
+      - { label: 'Layout', 
+          name: 'layout', 
+          widget: 'select', 
+          options: ["layout1", "layout2", "layout3"], 
+          required: false, default: ["layout1"]
+          }
       - label: 'Image gallery'
         name: 'imagegallery'
         widget: 'object'
@@ -132,6 +149,10 @@ collections:
               summary: '{{fields.image}}',
               field: {label: Image, name: Galleryimage, widget: image},
             }
+
+      
+
+
 
   - name: 'settings'
     label: 'Settings'

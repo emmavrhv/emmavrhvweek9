@@ -176,8 +176,8 @@ const updateTagCounts = async () => {
 
 <style>
 .multiply-blend {
-  mix-blend-mode: multiply;
-  filter: contrast(0.8);
+  mix-blend-mode: screen; /* Alternative blend mode */
+  filter: brightness(.6) contrast(3) ;/* Adjusted filter for a distinct effect */
 }
 
 .multiply-blend {
