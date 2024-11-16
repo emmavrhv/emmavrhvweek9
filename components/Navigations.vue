@@ -7,7 +7,16 @@
         </div>
       </div>
 
-  
+      <div v-if="navigations.submenu.pagenavigation_on_off">
+        <div class="animate-fade animate-once animate-delay-[150ms]">
+            <PageNavigation />
+        </div>
+      </div>
+      <div v-if="navigations.submenu.blognavigation_on_off">
+        <div class="animate-fade animate-once animate-delay-[150ms]">
+            <BlogNavigation />
+        </div>
+      </div>
     </div>
 </template>    
 
@@ -15,7 +24,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import MainNavigation from './global/navs/MainNavigation.vue';
 
 const navigations = ref({});
 // Use useFetch to load the JSON data from the public folder

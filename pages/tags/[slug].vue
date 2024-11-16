@@ -15,10 +15,10 @@ useHead({
 </script>
 
 <template>
-<div class="pr-5">
-   <Drawer />
-  <div class="container mt-10 mb-20">
-
+<div class="container mt-10 mb-20">
+  <div>
+      <Drawer />
+    </div>
     <div class="text-xl font-bold mb-5">All objects from the collection with the tag "{{ slug }}"</div>
     <section class="page-section">
       <!-- Render list of all articles in ./content/blog using `path` -->
@@ -58,8 +58,7 @@ useHead({
         </template>
       </ContentList>
     </section>
-  </div>
-</div>    
+</div>  
 </template>
 
 <style scoped>

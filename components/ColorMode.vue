@@ -33,7 +33,7 @@
       </button>
     </div>
     
-    <div class="w-full mb-2">
+    <div class="w-full mb-5">
         <p class="description">Color mode: {{ colorMode.preference }}
         </p>
     </div>
