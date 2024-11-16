@@ -123,5 +123,14 @@ collections:
                 label: 'Last blogs in navigation on / off'
                 widget: 'boolean'
                 default: true
-                hint: 'Turn the folder navigation on or off'  
-      
+                hint: 'Turn the folder navigation on or off' 
+                 
+  - name: 'tags'
+    label: 'Tags (experimental)'
+    folder: 'content/tags'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Tag', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+  
