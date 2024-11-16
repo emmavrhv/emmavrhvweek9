@@ -16,8 +16,5 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .social-share-button:hover {
-    /* Add hover styles if needed */
-  }
   </style>
   
