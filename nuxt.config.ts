@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
+  ssr: true,
 
   modules: [
     '@nuxtjs/tailwindcss',
@@ -52,14 +52,6 @@ export default defineNuxtConfig({
     '@/plugins/global-components.js',
   ],
 
-  // module options
-  socialShare: {
-    baseUrl: 'https://bpedu2425.netlify.app', // required!
-    // other optional module options
-    styled: false,
-    label: true,
-  },
-
   css: [
     '~/assets/styles/colormode.css',
     '~/assets/styles/styles.css',
@@ -73,6 +65,15 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     }
+  },
+
+
+  // module options
+  socialShare: {
+    baseUrl: 'https://bpdecapstudents.netlify.app', // required!
+    // other optional module options
+    styled: false,
+    label: true,
   },
 
   devtools: { enabled: true },
