@@ -32,8 +32,6 @@
       <Meta name="description" :content="data.description" />
       <Meta name="tags" :content="data.tags" />
       <Meta name="keywords" :content="data.tags.join(', ')" /> <!-- Add keywords here -->
-
-      
       <!-- Open Graph Meta Tags -->
       <Meta property="og:title" :content="data.title" />
       <Meta property="og:description" :content="data.description" />

@@ -12,7 +12,7 @@
 
   <el-drawer
     v-model="drawer"
-    class="drawer min-w-full lg:min-w-256 xl:min-w-128"
+    class="drawer min-w-128"
     :direction="direction"
     :custom-class="'fixed-drawer'"
   >
@@ -38,7 +38,7 @@
 import { ref } from 'vue'
 import type { DrawerProps } from 'element-plus'
 const drawer = ref(false)
-const direction = ref<DrawerProps['direction']>('rtl')
+const direction = ref<DrawerProps['direction']>('ltr')
 </script>
 
 <style>
