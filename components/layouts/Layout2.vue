@@ -1,6 +1,7 @@
 
 <template>
   <div class="layout2">
+    <ClientOnly>
     <div class="relative max-h-screen overflow-hidden z-1">
       <!-- Lazy loading applied to NuxtImg -->
       <NuxtImg
@@ -90,7 +91,9 @@
     <Meta property="og:image" :content="data.thumbnail" />
     <Meta property="og:url" :content="data.url" />
     <Meta property="og:type" content="article" />
+  </ClientOnly>
   </div>
+
 </template>
 
 <script setup>

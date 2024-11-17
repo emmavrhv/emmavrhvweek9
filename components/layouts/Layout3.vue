@@ -1,4 +1,5 @@
 <template>
+  <ClientOnly>
   <div class="layout3">
     <!-- Drawer -->
     <div class="pr-5 z-100 w-full">
@@ -49,6 +50,7 @@
     <Meta property="og:url" :content="data.url" /> <!-- Add the current URL -->
     <Meta property="og:type" content="article" /> 
   </div>
+  </ClientOnly>
 </template>
 
 <script setup>
