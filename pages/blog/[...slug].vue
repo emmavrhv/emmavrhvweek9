@@ -14,6 +14,7 @@
 import { ref } from 'vue';
 import { useRoute } from '#app';
 
+
 import Layout1 from '~/components/layouts/Layout1.vue';
 import Layout2 from '~/components/layouts/Layout2.vue';
 import Layout3 from '~/components/layouts/Layout3.vue';
@@ -37,6 +38,10 @@ function formatDate(date) {
   const options = { year: 'numeric', month: 'long' };
   return new Date(date).toLocaleDateString(undefined, options);
 }
+
+
+
+
 </script>
 
 <style>

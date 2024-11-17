@@ -2,7 +2,7 @@
   <div class="mb-20 animate-fade animate-once animate-delay-[500ms]">
     <ContentQuery :path="$route.path" find="one" v-slot="{ data }">
       <component
-        :is="getLayoutComponent(data.layoutpage)"
+        :is="getLayoutComponent( data.layoutpage )"
         :data="data"
         :formatDate="formatDate"
       />
