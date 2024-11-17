@@ -1,13 +1,9 @@
 ---
 title: Example - collection A
-date: 2024-11-15T12:58:59.910Z
 related_page:
   - 2024-11-17-example-page-a
-thumbnail: /img/elimende-inagella-oj8ahnj18gc-unsplash.jpg
 reftags:
   - Tag A
-layout: layout2
-mainincluded: true
 imagegallery:
   showgallery: true
   carouselgrid: carousel
@@ -15,9 +11,14 @@ imagegallery:
     - /img/parrish-freeman-Wi_Kun_mstU-unsplash.jpg
     - /img/pierre-chatel-innocenti-dWBoc5jWYhY-unsplash.jpg
   gallerytext: ""
+thumbnail: /img/mika-korhonen--xiyLfBYy_Q-unsplash.jpg
+date: 2024-11-15T12:58:59.910Z
+layout: layout2
+mainincluded: true
 tags:
   - Tag 1
 collectionincluded: true
+numbernavigation: 11
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
   fringilla nunc id tellus commodo, et suscipit nisl mattis. Duis venenatis
   malesuada libero, tristique consectetur augue egestas pharetra. Cras sit amet
@@ -26,7 +27,6 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
   sodales risus ullamcorper in. Cras sed cursus arcu. Mauris pulvinar euismod
   eros, vitae elementum massa mattis vitae. Duis viverra mattis vulputate.
   Integer faucibus malesuada metus, pharetra molestie odio bibendum ut.
-numbernavigation: 11
 ---
 ## **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla nunc id tellus commodo, et suscipit nisl mattis. Duis venenatis malesuada libero, tristique consectetur augue egestas pharetra. Cras sit amet lacinia nulla, et accumsan nulla. Orci varius natoque penatvibu s et magnis dis parturient montes, nascetur ridiculus mus. Vivamus rhoncus bibendum orci, in sodales risus ullamcorper in. Cras sed cursus arcu. Mauris pulvinar euismod eros, vitae elementum massa mattis vitae. Duis viverra mattis vulputate. Integer faucibus malesuada metus, pharetra molestie odio bibendum ut.**
 

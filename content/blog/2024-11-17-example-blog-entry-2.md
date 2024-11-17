@@ -2,13 +2,13 @@
 layout: default
 title: Example - blog entry 2
 subtitle: Subtitle example - blog entry 2
-date: 2024-11-17T11:32:11.103Z
-thumbnail: /img/pierre-chatel-innocenti-amlcrqr6wns-unsplash.jpg
 tags:
   - Tag 1
   - Tag 3
   - Tag 2
-numbernavigation: 0
+thumbnail: /img/pierre-chatel-innocenti-amlcrqr6wns-unsplash.jpg
+date: 2024-11-17T11:32:11.103Z
+numbernavigation: 1
 layoutblog: layout2
 promoted: 100
 ---
