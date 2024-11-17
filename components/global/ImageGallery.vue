@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div class="container mb-20 mt-10">
+    <div class="container">
       <div v-if="post.folder !== 'page'">
         <FolderContent v-if="post.folder" :title="post.title" />
       </div>
@@ -13,7 +13,7 @@
         <p v-if="post.imagegallery.gallerytext" class="pb-2">{{ post.imagegallery.gallerytext }}</p>
 
 
-        <el-carousel height="80vh" indicator-position="none" motion-blur>
+        <el-carousel indicator-position="none" motion-blur>
     <el-carousel-item v-for="(item, index) in post.imagegallery.galleryImages" :key="index">
       <div class="relative h-full flex items-center justify-center">
         <!-- Show loader until the image is fully loaded -->

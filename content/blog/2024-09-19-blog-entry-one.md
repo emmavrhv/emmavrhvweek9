@@ -1,12 +1,14 @@
 ---
 layout: default
 title: Example - blog entry 1
-date: 2024-11-15T14:18:09.679Z
-thumbnail: /img/jonthesquirrel-nF1ISirk37Q-unsplash.jpg
+subtitle: Subtitle example - blog entry 1
 tags:
   - Tag 1
   - Tag 3
   - Tag 2
+thumbnail: /img/pan-polanscii-sdmvpx5jh4u-unsplash.jpg
+date: 2024-11-15T14:18:09.679Z
+author: John Jones
 numbernavigation: 1
 layoutblog: layout2
 promoted: 100

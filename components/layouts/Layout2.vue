@@ -1,24 +1,26 @@
 <template>
   <div class="layout2">
-    <div class="relative z-1">
+    <div class="relative max-h-screen overflow-hidden z-1">
       <NuxtImg
         v-if="data.thumbnail"
         :src="data.thumbnail"
-        class="w-screen opacity-80 max-h-screen "
+        class="w-screen opacity-80 bg-cover "
         :alt="`Thumbnail for ${data.title}`"
         format="webp"
         loading="lazy"
         @load="imageLoaded = true"
       />
-      <div v-if="!imageLoaded" class="absolute min-h-screen inset-0 flex items-center justify-center bg-black bg-opacity-75">
+      <div v-if="!imageLoaded" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75">
         <div class="spinner"></div>
       </div>
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 animate-fade animate-once animate-delay-[500ms]" v-if="imageLoaded">
-        <div class="w-1/2">
-          <div>
-            <h1 class="text-white text-4xl md:text-6xl lg:text-8xl font-bold pb-10">{{ data.title }}</h1>
+        <div class="container p-4">
+          <div class="">
+            <h1 class="text-white text-4xl md:text-6xl lg:text-8xl font-bold">{{ data.title }}</h1>
+            <h1 v-if="data.subtitle" class="text-white opacity-80 pt-3 text-xl md:text-2xl lg:text-3xl font-bold pb-10">{{ data.subtitle }}</h1>
           </div>
-          <div class="text-white">
+          <div>
+            <p v-if="data.author" class="text-white opacity-80 text-xs font-bold">{{ data.author }}</p>
             <p class="text-white text-xs opacity-50 hover:opacity-100">Last update: {{ formatDate(data.date) }}</p>
           </div>
         </div>
@@ -33,27 +35,34 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
         <!-- First column -->
         <div>
-          <h1 class="text-3xl md:text-3xl lg:text-6xl lg:mb-10 font-bold">{{ data.title }}</h1>
+          <h1 class="text-3xl md:text-3xl lg:text-6xl lg:mb-3 font-bold">{{ data.title }}</h1>
+          <h1 v-if="data.subtitle" class="opacity-80 text-xl md:text-2xl lg:text-3xl font-bold pb-10">{{ data.subtitle }}</h1>
           <p class="text-lg md:text-2xl lg:text-xl pb-5 font-bold">{{ data.description }}</p>
-          <div v-if="data.imagegallery">
+          <div v-if="data.imagegallery && data.imagegallery.showgallery == true">
             <ImageGallery />
           </div>
-          <!-- Link and published date -->
-          <div class="text-xs leading-3">
-            <hr>
-            <p class="text-xs opacity-50 hover:opacity-100 pb-5">Last update: {{ formatDate(data.date) }}</p>
-            <article v-if="data.tags" class="tags">
-              <li v-for="(item, index) in data.tags" :key="index" class="pt-2 text-xs opacity-50 hover:opacity-100">
-                <NuxtLink :to="`/tags/${item}`">{{ item }}</NuxtLink>
-              </li>
-            </article>
-          </div>
+          
         </div>
         <!-- Second column -->
         <div>
           <ContentRenderer :value="data" />
         </div>
       </div>
+      <!--  Second row -->
+      <div v-if="data.related_page">
+        <RelatedPages :relatedPages="data.related_page" />
+      </div>
+      <!-- Link and published date -->
+      <div class="text-xs leading-3">
+            <hr>
+            <p class="text-xs opacity-50 hover:opacity-100 pb-2">Last update: {{ formatDate(data.date) }}</p>
+
+            <article v-if="data.tags" class="tags">
+              <li v-for="(item, index) in data.tags" :key="index" class="pt-2 text-xs opacity-50 hover:opacity-100">
+                <NuxtLink :to="`/tags/${item}`">{{ item }}</NuxtLink>
+              </li>
+            </article>
+          </div>
     </div>
     <ShareButtons />
 
@@ -62,6 +71,8 @@
     <Title>{{ data.title }}</Title>
     <Meta name="description" :content="data.description" />
     <Meta name="tags" :content="data.tags.join(', ')" />
+    <Meta name="keywords" :content="data.tags.join(', ')" /> <!-- Add keywords here -->
+
     
     <!-- Open Graph Meta Tags -->
     <Meta property="og:title" :content="data.title" />
@@ -78,6 +89,7 @@ import { ref } from 'vue';
 const imageLoaded = ref(false);
 
 defineProps(['data', 'formatDate']);
+
 </script>
 
 <style scoped>

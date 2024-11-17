@@ -1,8 +1,8 @@
 <template>
   <div
-  class="opacity-50 mt-10 animate-fade animate-once animate-delay-[100ms]">
+  class="opacity-50 animate-fade animate-once animate-delay-[100ms]">
     <div
-    class="text-xs mb-5"
+    class="text-xs mb-3"
     >{{ settings.copyright }}
     </div>
   </div>
