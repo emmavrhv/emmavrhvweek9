@@ -1,17 +1,21 @@
 ---
 layout: default
-title: Example - blog entry 2
-subtitle: Subtitle example - blog entry 2
+title: "Nuxt Decap / Student "
+subtitle: Demo
 tags:
   - Tag 1
   - Tag 3
   - Tag 2
 thumbnail: /img/pierre-chatel-innocenti-amlcrqr6wns-unsplash.jpg
 date: 2024-11-17T11:32:11.103Z
-numbernavigation: 1
+numbernavigation: 0
 layoutblog: layout2
-promoted: 100
+description: Nuxt Decap is a content management system designed for creating
+  datasets and visualizing and publishing data within an application.
+promoted: 0
 ---
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ligula eget sem ultricies pharetra nec vitae mauris. Duis vitae condimentum ante, sed rutrum neque. Proin orci purus, venenatis in venenatis eu, ullamcorper quis tellus. Fusce blandit non metus sed interdum. Nulla nibh metus, posuere et massa et, aliquam commodo felis. Duis ut felis quis metus elementum pharetra non sed felis. Morbi ac elementum mauris. Praesent nec orci ut tortor vulputate euismod. Donec id porta nisi, ut consequat nisl. Nulla tellus mauris, posuere sit amet magna id, vehicula egestas eros. Aenean sed faucibus augue. Cras sit amet orci fermentum, vestibulum neque ac, pulvinar neque.**
+The GitHub repository [Nuxt-decap-students](https://github.com/bureaupixel/Nuxt-decap-students) is designed for creating a static site using Nuxt 3, Tailwind CSS, and Decap CMS. It serves as a template for managing online publications, blogposts and image collections.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae ligula eget sem ultricies pharetra nec vitae mauris. Duis vitae condimentum ante, sed rutrum neque. Proin orci purus, venenatis in venenatis eu, ullamcorper quis tellus. Fusce blandit non metus sed interdum. Nulla nibh metus, posuere et massa et, aliquam commodo felis. Duis ut felis quis metus elementum pharetra non sed felis. Morbi ac elementum mauris. Praesent nec orci ut tortor vulputate euismod. Donec id porta nisi, ut consequat nisl. Nulla tellus mauris, posuere sit amet magna id, vehicula egestas eros. Aenean sed faucibus augue. Cras sit amet orci fermentum, vestibulum neque ac, pulvinar neque.
+Students can use this repostory as a starting point to build blogs, procesfolio's and image collections.
+
+**Click here for [installation instructions](https://bpedu2425.netlify.app/folders/startguide/page7)**

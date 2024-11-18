@@ -12,7 +12,7 @@
 
   <el-drawer
     v-model="drawer"
-    class="drawer min-w-128"
+    class="drawer min-w-128 max-w-screen"
     :direction="direction"
     :custom-class="'fixed-drawer'"
   >

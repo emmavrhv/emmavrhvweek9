@@ -6,7 +6,7 @@ tags:
   - Tag 1
   - Tag 3
   - Tag 2
-thumbnail: /img/marten-bjork-z2eglcjob40-unsplash.jpg
+thumbnail: /img/pat-krupa-oM9L2V90-i4-unsplash.jpg
 date: 2024-11-15T14:18:09.679Z
 author: John Jones
 numbernavigation: 1
