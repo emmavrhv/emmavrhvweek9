@@ -1,8 +1,4 @@
 {
-  "homepage_title": "Nuxt Decap ",
-  "homepage_subtitle": "subtitle op de homepage",
-  "thumbnail": "/img/pierre-chatel-innocenti-2MoEcGNUj-I-unsplash.jpg",
-  "body": "",
-  "homepageimage": true,
-  "homepageredirect": "/blog/2024-11-17-example-blog-entry-2"
+  "homepageredirect": [],
+  "thumbnail": "/img/matze-bob-rq8i6_hg_og-unsplash.jpg"
 }
