@@ -1,28 +1,83 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 const router = useRouter();
-const settings = ref(null);  // Initialize as null for loading state
-const isLoading = ref(true);  // Loading state to show the content only after data is loaded
-const hasError = ref(false);  // Error state to show an error message if data loading fails
 
-// Fetch JSON data using native fetch API
+const homepageSettings = ref(null); // For homepage.json data
+const generalSettings = ref(null); // For settings.json data
+
+const isLoading = ref(true); // Loading state
+const hasError = ref(false); // Error state
+
+// For typewriter effect
+const displayedTitle = ref(""); // Title animation
+const displayedSubtitle = ref(""); // Subtitle animation
+const displayedCopyright = ref(""); // Copyright animation
+const typingSpeed = 20; // Speed of typewriter effect
+
+const animateTypewriter = (text, refToUpdate, callback = null) => {
+  let index = 0;
+
+  const type = () => {
+    if (index < text.length) {
+      refToUpdate.value += text.charAt(index);
+      index++;
+      setTimeout(type, typingSpeed);
+    } else if (callback) {
+      callback();
+    }
+  };
+
+  type();
+};
+
 onMounted(async () => {
   try {
-    const response = await fetch('/_data/homepage.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    // Fetch homepage.json
+    const homepageResponse = await fetch('/_data/homepage.json');
+    if (!homepageResponse.ok) {
+      throw new Error(`Homepage settings error! status: ${homepageResponse.status}`);
     }
-    const jsonData = await response.json();
-    settings.value = jsonData;
+    const homepageData = await homepageResponse.json();
+    homepageSettings.value = homepageData;
 
-    // Redirect if homepageredirect is set
-    if (settings.value.homepageredirect) {
-      router.push(settings.value.homepageredirect);
+    // Fetch settings.json
+    const settingsResponse = await fetch('/_data/settings.json');
+    if (!settingsResponse.ok) {
+      throw new Error(`General settings error! status: ${settingsResponse.status}`);
     }
+    generalSettings.value = await settingsResponse.json();
+
     
-    isLoading.value = false;  // Stop loading when data is fetched
+
+    if (homepageSettings.value.homepageredirect ==""){
+      // console.log('no')
+      // Start typewriter effect when general settings are loaded
+    animateTypewriter(generalSettings.value.site_title || "", displayedTitle, () => {
+      animateTypewriter(generalSettings.value.site_subtitle || "", displayedSubtitle, () => {
+        const copyrightText = (generalSettings.value.copyright);
+        animateTypewriter(copyrightText, displayedCopyright);
+      });
+    });
+    }
+    else {
+      // console.log('yes')
+      // Redirect if homepageredirect is set
+      if (homepageSettings.value.homepageredirect) {
+          const redirectPath = homepageSettings.value.homepageredirect
+            ? `/page/${homepageSettings.value.homepageredirect}`
+            : null;
+
+          if (redirectPath) {
+            router.push(redirectPath);
+          }
+        }
+    }
+
+   
+
+    isLoading.value = false; // Stop loading when both files are fetched
   } catch (error) {
-    hasError.value = true;  // If there's an error, show the error message
+    hasError.value = true; // Show error message if fetching fails
     console.error('Error loading settings:', error);
   }
 });
@@ -30,34 +85,90 @@ onMounted(async () => {
 
 <template>
   <div>
-    <div v-if="settings" class="">
-      <!-- Show PromotedContent only if settings.homepageimage is true -->
-        <div v-if="settings.homepageimage === false" >
-          <div class="pr-5">
-            <Drawer />
-          </div>
-          <div class="container animate-fade animate-once animate-delay-[500ms] mt-10 mb-20">
-                <div class="text-xl font-bold">{{ settings.homepage_title }}</div>
-                <div v-if="settings.homepage_subtitle" class="text-xl font-bold">{{ settings.homepage_subtitle }}</div>
-                <div class="text-sm opacity-80">{{ settings.body }}</div>
-                <PromotedContent v-if="settings.homepageimage === false" />
-                <UtilNav />
-                <div class="flex">
-                  <NuxtLink to="https://github.com/bureaupixel/" target="_blank">
-                    <div class="flex-col hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-                          <path fill="currentColor" d="M203.94 76.16A55.73 55.73 0 0 0 199.46 30a4 4 0 0 0-3.46-2a55.78 55.78 0 0 0-46 24h-28a55.78 55.78 0 0 0-46-24a4 4 0 0 0-3.46 2a55.73 55.73 0 0 0-4.48 46.16A53.8 53.8 0 0 0 60 104v8a52.06 52.06 0 0 0 52 52h1.41A36 36 0 0 0 100 192v12H72a28 28 0 0 1-28-28a36 36 0 0 0-36-36a4 4 0 0 0 0 8a28 28 0 0 1 28 28a36 36 0 0 0 36 36h28v20a4 4 0 0 0 8 0v-40a28 28 0 0 1 56 0v40a4 4 0 0 0 8 0v-40a36 36 0 0 0-13.41-28H160a52.06 52.06 0 0 0 52-52v-8a53.8 53.8 0 0 0-8.06-27.84M204 112a44.05 44.05 0 0 1-44 44h-48a44.05 44.05 0 0 1-44-44v-8a45.76 45.76 0 0 1 7.71-24.89a4 4 0 0 0 .53-3.84a47.82 47.82 0 0 1 2.1-39.21a47.8 47.8 0 0 1 38.12 22.1a4 4 0 0 0 3.37 1.84h32.34a4 4 0 0 0 3.37-1.84a47.8 47.8 0 0 1 38.12-22.1a47.82 47.82 0 0 1 2.1 39.21a4 4 0 0 0 .53 3.83A45.85 45.85 0 0 1 204 104Z"></path>
-                      </svg>
-                    </div>
-                    <div class="">
-                    <span class="text-xs opacity-80 leading-tight">This dataset is based on a Bureaupixel Github repository with a MIT License. Feel free to download and install it on your local machine.</span>
-                    </div>
-                  </NuxtLink>
-                </div>
+    <!-- Loading state -->
+    <div v-if="isLoading" class="flex items-center justify-center h-screen">
+      <p>Loading...</p>
+    </div>
 
+    <!-- Error state -->
+    <div v-else-if="hasError" class="flex items-center justify-center h-screen">
+      <p>Error loading settings. Please try again later.</p>
+    </div>
+
+    <!-- Main content -->
+    <div v-else class="h-screen relative">
+      <!-- Background container -->
+      <div class="relative h-full">
+        <!-- Background image -->
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          :style="{ backgroundImage: homepageSettings?.thumbnail ? `url(${homepageSettings.thumbnail})` : '' }"
+        ></div>
+
+        <!-- Black overlay for opacity -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+
+        <!-- Content above the background -->
+        <div class="relative z-10 pr-5">
+          <Drawer />
+        </div>
+
+        <!-- Info section with typewriter effect -->
+        <div class="info flex flex-col items-center justify-center h-screen relative">
+          <div class="container text-left p-1 lg:p-20">
+            <div
+              class="container opacity-80 animate-fade animate-once animate-delay-[100ms] text-white"
+            >
+              <!-- Title -->
+              <div class="relative">
+                <div class="blur-text text-6xl font-bold">{{ displayedTitle }}</div>
+                <div class="text-6xl font-bold border-r-4 border-white pr-2 animate-blink">
+                  {{ displayedTitle }}
+                </div>
+              </div>
+
+              <!-- Subtitle -->
+              <div class="relative mt-4">
+                <div class="blur-text text-2xl font-semibold">{{ displayedSubtitle }}</div>
+                <div class="text-2xl font-semibold">{{ displayedSubtitle }}</div>
+              </div>
+
+              <!-- Copyright -->
+              <div class="relative mt-4">
+                <div class="blur-text font-light">{{ displayedCopyright }}</div>
+                <div class="font-light">{{ displayedCopyright }}</div>
+              </div>
+            </div>
           </div>
         </div>
-     
+      </div>
     </div>
   </div>
 </template>
+
+
+<style>
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.7s step-end infinite;
+}
+
+/* Blurred text styling */
+.blur-text {
+  position: absolute; /* Place the blurred text behind the original */
+  top: 0;
+  left: 0;
+  color: black; /* Black text for contrast */
+  opacity: 0.4; /* Adjust for a subtle blur */
+  filter: blur(8px); /* Apply Gaussian blur */
+  z-index: -1; /* Ensure it's below the main text */
+}
+</style>

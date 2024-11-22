@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@element-plus/nuxt',
     '@nuxt/image',
-    '@stefanobartoletti/nuxt-social-share'
+    '@stefanobartoletti/nuxt-social-share',
+    'nuxt-lazy-load'
   ],
 
   content: {
@@ -52,6 +53,16 @@ export default defineNuxtConfig({
     '@/plugins/global-components.js',
   ],
 
+  lazyLoad: {
+    // These are the default values
+    images: true,
+    videos: true,
+    audios: true,
+    iframes: true,
+    native: false,
+    directiveOnly: false,
+  },
+    
   css: [
     '~/assets/styles/colormode.css',
     '~/assets/styles/styles.css',

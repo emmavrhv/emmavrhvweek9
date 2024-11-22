@@ -1,6 +1,6 @@
 
 <template>
-  <div class="layout2">
+  <div class="layout4">
     <ClientOnly>
     <div class="relative max-h-screen overflow-hidden z-1">
       <!-- Lazy loading applied to NuxtImg -->

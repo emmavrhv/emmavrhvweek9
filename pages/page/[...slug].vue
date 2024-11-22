@@ -11,12 +11,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRoute } from '#app';
-
 import Layout1 from '~/components/layouts/Layout1.vue';
 import Layout2 from '~/components/layouts/Layout2.vue';
 import Layout3 from '~/components/layouts/Layout3.vue';
+import Layout4 from '~/components/layouts/Layout4.vue';
+import Layout5 from '~/components/layouts/Layout5.vue';
 
 // Function to get the corresponding layout component
 function getLayoutComponent(layout) {
@@ -27,6 +26,10 @@ function getLayoutComponent(layout) {
       return Layout2;
     case 'layout3':
       return Layout3;
+    case 'layout4':
+      return Layout4;
+    case 'layout5':
+      return Layout5;    
     default:
       return null;
   }
