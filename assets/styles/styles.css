@@ -14,7 +14,15 @@ hr{
     border-bottom: 1px solid #ccc;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+    
+
+
 }
+
+h1{
+    font-family: "Playfair Display", serif;
+}
+
 ul, li {
     list-style: none;
 }

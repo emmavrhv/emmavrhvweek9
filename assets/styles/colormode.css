@@ -1,30 +1,33 @@
 /* Body element */
 body {
-    background-color: #eeeeeb;
-    color: rgba(0,0,0,0.8);
+    background-color: #ff0000;
+    color: rgba(223, 210, 210, 0.8);
     }
     .light-mode body {
-    background-color: #e2e3e5;
-    color: #161717;
+    background-color: #ecd3d3;
+    color: #ff0000;
     }
-    .el-drawer {
-        background-color: rgba(255, 255, 255, 0.99);
+    
+    .el-drawer .light-mode {
+        background-color: #ff0000;
+        color: #ecd3d3;
     }
     /* */
     .dark-mode body {
-    background-color: #161715;
-    color: #ebf4f1;
+    background-color: #f9f2f0;
+    color: rgba(0, 17, 255, 0.98);
     }
     .dark-mode .backcolor{
-        background-color: #161715;
+        background-color: rgba(0, 17, 255, 0.98);
     }
     .dark-mode .el-drawer {
-        background-color: rgba(30, 30, 30, 0.98);
-      }
+        background-color: rgba(0, 17, 255, 0.98);
+        color: #ffffff;  
+    }
     /* */
     .gray-mode body {
-    background-color: #bbbcb1;
-    color: #251603ef;
+    background-color: #fff9f9;
+    color: #0e0d0d;
     }
     .gray-mode .backcolor{
         background-color: rgba(50, 64, 63, 0.98);
@@ -38,7 +41,7 @@ body {
     }
     */
     .gray-mode .el-drawer {
-        background-color: rgba(91, 115, 101, 0.95);
+        background-color:#ff0000;
         color: #ebebeb;
     }
     

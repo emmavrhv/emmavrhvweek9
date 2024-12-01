@@ -49,7 +49,7 @@ const direction = ref<DrawerProps['direction']>('ltr')
   right: 0;
   bottom: 0;
   z-index: 1000; /* Ensures it appears on top */
-  background-color: rgba(255, 255, 255, 0.99);
+  background-color: #ff0000;
 }
 
 .flex-row {
@@ -64,4 +64,11 @@ const direction = ref<DrawerProps['direction']>('ltr')
 .mt-auto {
   margin-top: auto;
 }
+</style>
+
+<style>
+.el-drawer  { background-color: rgba(206, 8, 8, 0.99);}
+.el-drawer {color: azure;}
+.dark-mode .el-drawer { color: #f3eded;}
+.gray-mode .el-drawer { background-color: black;  color: #f3eded;}
 </style>

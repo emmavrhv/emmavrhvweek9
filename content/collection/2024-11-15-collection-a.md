@@ -1,17 +1,25 @@
 ---
-title: Example - collection A
-related_page:
-  - 2024-11-17-example-page-a
+title: Onderkruipsels
+related_page: []
 reftags:
-  - Tag A
+  - Tag 2
 imagegallery:
   showgallery: true
   carouselgrid: carousel
   galleryImages:
-    - /img/parrish-freeman-Wi_Kun_mstU-unsplash.jpg
-    - /img/pierre-chatel-innocenti-dWBoc5jWYhY-unsplash.jpg
+    - /img/dsc_8504.jpg
+    - /img/dsc_8507.jpg
+    - /img/dsc_8511.jpg
+    - /img/dsc_8516.jpg
+    - /img/dsc_8519.jpg
+    - /img/dsc_8523.jpg
+    - /img/dsc_8527.jpg
+    - /img/dsc_8530.jpg
+    - /img/dsc_8535.jpg
+    - /img/dsc_8538.jpg
+    - /img/dsc_8540.jpg
   gallerytext: ""
-thumbnail: /img/mika-korhonen--xiyLfBYy_Q-unsplash.jpg
+thumbnail: /img/sk-a-2329.jpg
 date: 2024-11-15T12:58:59.910Z
 layout: layout5
 mainincluded: true

@@ -194,7 +194,7 @@ const updateTagCounts = async () => {
 }
 
 .dark-mode body {
-  background-color: #161715;
+  background-color: rgba(0, 17, 255, 0.98);;
   color: #ebf4f1;
 }
 
