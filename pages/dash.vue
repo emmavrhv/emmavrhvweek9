@@ -5,7 +5,7 @@
         </div>
         <div class="container">
             <div>
-            <h1 class="text-3xl md:text-3xl lg:text-6xl lg:mb-10 font-bold"> Dashboard</h1>
+            <h1 class="text-3xl md:text-3xl lg:text-6xl lg:mb-10 .playfair-display font-bold"> Dashboard</h1>
             </div>
             <AllbooksArticlesTagTable /> 
             <AllbooksTagChart /> 

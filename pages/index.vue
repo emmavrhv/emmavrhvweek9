@@ -121,8 +121,8 @@ onMounted(async () => {
             >
               <!-- Title -->
               <div class="relative">
-                <div class="blur-text text-6xl font-bold">{{ displayedTitle }}</div>
-                <div class="text-6xl font-bold border-r-4 border-white pr-2 animate-blink">
+                <div class="blur-text text-6xl .playfair-display font-bold">{{ displayedTitle }}</div>
+                <div class="text-6xl font-bold border-r-4 border-white pr-2 animate-blink ">
                   {{ displayedTitle }}
                 </div>
               </div>
@@ -130,7 +130,7 @@ onMounted(async () => {
               <!-- Subtitle -->
               <div class="relative mt-4">
                 <div class="blur-text text-2xl font-semibold">{{ displayedSubtitle }}</div>
-                <div class="text-2xl font-semibold">{{ displayedSubtitle }}</div>
+                <div class="text-2xl .playfair-display font-semibold">{{ displayedSubtitle }}</div>
               </div>
 
               <!-- Copyright -->
