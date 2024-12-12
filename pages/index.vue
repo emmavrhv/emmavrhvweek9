@@ -121,15 +121,15 @@ onMounted(async () => {
             >
               <!-- Title -->
               <div class="relative">
-                <div class="blur-text text-6xl .playfair-display font-bold">{{ displayedTitle }}</div>
-                <div class="text-6xl font-bold border-r-4 border-white pr-2 animate-blink ">
+                <div class="blur-text homepagetitle text-6xl .playfair-display font-bold">{{ displayedTitle }}</div>
+                <div class=" homepagetitle text-6xl font-bold border-r-4 border-white pr-2 animate-blink ">
                   {{ displayedTitle }}
                 </div>
               </div>
 
               <!-- Subtitle -->
               <div class="relative mt-4">
-                <div class="blur-text text-2xl font-semibold">{{ displayedSubtitle }}</div>
+                <div class=" homepagetitle blur-text text-2xl font-semibold">{{ displayedSubtitle }}</div>
                 <div class="text-2xl .playfair-display font-semibold">{{ displayedSubtitle }}</div>
               </div>
 
@@ -170,5 +170,11 @@ onMounted(async () => {
   opacity: 0.4; /* Adjust for a subtle blur */
   filter: blur(8px); /* Apply Gaussian blur */
   z-index: -1; /* Ensure it's below the main text */
+
 }
+
+.homepagetitle {
+  font-family: 'playfair-display';
+}
+
 </style>
