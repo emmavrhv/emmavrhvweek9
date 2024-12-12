@@ -6,16 +6,15 @@ tags:
   - Tag A
 imagegallery:
   showgallery: true
-  carouselgrid: null
+  carouselgrid: carousel
   galleryImages:
-    - /img/pierre-chatel-innocenti-amlcrqr6wns-unsplash.jpg
-    - /img/elimende-inagella-oj8ahnj18gc-unsplash.jpg
+    - /img/scherm­afbeelding-2024-12-03-om-14.16.29.png
   gallerytitle: ""
 thumbnail: /img/scherm­afbeelding-2024-10-17-om-16.14.35.png
 date: 2024-11-17T14:29:57.955Z
 numbernavigation: 1
 layoutpage: layout2
-description: 
+description: null
 promoted: "0"
 ---
 Ik ben Emma Verhoeven, een 19-jarige studente Media & Information Design aan LUCA School of Arts in Brussel. Mijn passie ligt bij grafisch ontwerp en typografie, waarbij ik altijd op zoek ben naar de perfecte balans tussen esthetiek en functionaliteit.

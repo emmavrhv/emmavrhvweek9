@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Example - blog entry 1
-date: 2024-11-15T14:18:09.679Z
+title: Typografie
 tags:
   - Tag 1
   - Tag 3
+thumbnail: /img/scherm­afbeelding-2024-10-09-om-17.28.30.png
+date: 2024-11-15T14:18:09.679Z
 numbernavigation: 0
 layoutblog: layout3
 promoted: 100

@@ -6,10 +6,10 @@ imagegallery:
   showgallery: true
   carouselgrid: carousel
   galleryImages:
-    - /img/datavisualisatie_v2.png
-    - /img/datavisualisatie_plaats_2.png
-    - /img/dsc_8488-1.jpg
-thumbnail: /img/datavisualisatie_v2.png
+    - /img/scherm­afbeelding-2024-12-03-om-14.13.10.png
+    - /img/scherm­afbeelding-2024-12-03-om-14.12.21.png
+    - /img/scherm­afbeelding-2024-12-03-om-14.13.43.png
+thumbnail: /img/scherm­afbeelding-2024-12-03-om-14.12.21.png
 date: 2024-11-15T21:56:56.704Z
 numbernavigation: 10
 layout: layout2
