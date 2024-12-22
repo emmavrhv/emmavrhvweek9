@@ -8,27 +8,9 @@ const generalSettings = ref(null); // For settings.json data
 const isLoading = ref(true); // Loading state
 const hasError = ref(false); // Error state
 
-// For typewriter effect
-const displayedTitle = ref(""); // Title animation
-const displayedSubtitle = ref(""); // Subtitle animation
-const displayedCopyright = ref(""); // Copyright animation
-const typingSpeed = 20; // Speed of typewriter effect
-
-const animateTypewriter = (text, refToUpdate, callback = null) => {
-  let index = 0;
-
-  const type = () => {
-    if (index < text.length) {
-      refToUpdate.value += text.charAt(index);
-      index++;
-      setTimeout(type, typingSpeed);
-    } else if (callback) {
-      callback();
-    }
-  };
-
-  type();
-};
+const title = ref(""); // Title
+const subtitle = ref(""); // Subtitle
+const copyright = ref(""); // Copyright
 
 onMounted(async () => {
   try {
@@ -47,33 +29,25 @@ onMounted(async () => {
     }
     generalSettings.value = await settingsResponse.json();
 
-    
+    // Set title, subtitle, and copyright directly
+    title.value = generalSettings.value.site_title || "";
+    subtitle.value = generalSettings.value.site_subtitle || "";
+    copyright.value = generalSettings.value.copyright || "";
 
-    if (homepageSettings.value.homepageredirect ==""){
-      // console.log('no')
-      // Start typewriter effect when general settings are loaded
-    animateTypewriter(generalSettings.value.site_title || "", displayedTitle, () => {
-      animateTypewriter(generalSettings.value.site_subtitle || "", displayedSubtitle, () => {
-        const copyrightText = (generalSettings.value.copyright);
-        animateTypewriter(copyrightText, displayedCopyright);
-      });
-    });
-    }
-    else {
-      // console.log('yes')
+    if (homepageSettings.value.homepageredirect == "") {
+      // No redirect, load page content
+    } else {
       // Redirect if homepageredirect is set
       if (homepageSettings.value.homepageredirect) {
-          const redirectPath = homepageSettings.value.homepageredirect
-            ? `/page/${homepageSettings.value.homepageredirect}`
-            : null;
+        const redirectPath = homepageSettings.value.homepageredirect
+          ? `/page/${homepageSettings.value.homepageredirect}`
+          : null;
 
-          if (redirectPath) {
-            router.push(redirectPath);
-          }
+        if (redirectPath) {
+          router.push(redirectPath);
         }
+      }
     }
-
-   
 
     isLoading.value = false; // Stop loading when both files are fetched
   } catch (error) {
@@ -113,30 +87,24 @@ onMounted(async () => {
           <Drawer />
         </div>
 
-        <!-- Info section with typewriter effect -->
+        <!-- Info section -->
         <div class="info flex flex-col items-center justify-center h-screen relative">
-          <div class="container text-left p-1 lg:p-20">
-            <div
-              class="container opacity-80 animate-fade animate-once animate-delay-[100ms] text-white"
-            >
+          <div class="container text-center p-1 lg:p-20">
+            <div class="container opacity-100 animate-fade animate-once animate-delay-[100ms] text-white">
               <!-- Title -->
               <div class="relative">
-                <div class="blur-text homepagetitle text-6xl .playfair-display font-bold">{{ displayedTitle }}</div>
-                <div class=" homepagetitle text-6xl font-bold border-r-4 border-white pr-2 animate-blink ">
-                  {{ displayedTitle }}
-                </div>
+                <div class="homepagetitle text-6xl font-semibold animate-fade animate-once animate-delay-[750ms] ">{{ title }}</div>
+                <div class="homepagetitle text-6xl font-semibold blur-background animate-fade animate-once animate-delay-[750ms] ">{{ title }}</div>
               </div>
 
               <!-- Subtitle -->
               <div class="relative mt-4">
-                <div class=" homepagetitle blur-text text-2xl font-semibold">{{ displayedSubtitle }}</div>
-                <div class="text-2xl .playfair-display font-semibold">{{ displayedSubtitle }}</div>
+                <div class="homepagetitle text-3xl animate-fade animate-once animate-delay-[1500ms] font-regular">{{ subtitle }}</div>
               </div>
 
               <!-- Copyright -->
               <div class="relative mt-4">
-                <div class="blur-text font-light">{{ displayedCopyright }}</div>
-                <div class="font-light">{{ displayedCopyright }}</div>
+                <div class="font-light animate-fade animate-once animate-delay-[1800ms]">{{ copyright }}</div>
               </div>
             </div>
           </div>
@@ -146,35 +114,18 @@ onMounted(async () => {
   </div>
 </template>
 
-
 <style>
-@keyframes blink {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-
-.animate-blink {
-  animation: blink 0.7s step-end infinite;
-}
-
-/* Blurred text styling */
-.blur-text {
-  position: absolute; /* Place the blurred text behind the original */
-  top: 0;
-  left: 0;
-  color: black; /* Black text for contrast */
-  opacity: 0.4; /* Adjust for a subtle blur */
-  filter: blur(8px); /* Apply Gaussian blur */
-  z-index: -1; /* Ensure it's below the main text */
-
-}
-
 .homepagetitle {
   font-family: 'playfair-display';
+}
+ 
+.blur-background {
+  position: absolute;
+  inset: 0;
+  filter: blur(3px);
+  color:rgba(249, 249, 249, 0.855); 
+  opacity: 0.1;
+  z-index: -1; /* Ensure blur is behind the text */
 }
 
 </style>
