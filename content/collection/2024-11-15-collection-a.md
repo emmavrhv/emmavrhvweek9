@@ -28,9 +28,6 @@ tags:
   - Tag 1
 collectionincluded: true
 numbernavigation: 11
-description: 
+description: null
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur ultricies est in lobortis. Nunc tincidunt, ligula ac dapibus finibus, quam ex pharetra sapien, vitae tincidunt ligula massa a orci. Donec vel odio vel nibh blandit lobortis ac vitae neque. Fusce tempor id libero non scelerisque. Integer ultrices, eros nec iaculis ornare, nulla ipsum varius ex, in consectetur mi massa sit amet libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin posuere mauris vel dui venenatis, ac euismod nibh tempor. Mauris non nulla vel lorem iaculis suscipit. Pellentesque tortor urna, fermentum eu feugiat et, auctor non turpis. Sed vitae sem quis tellus sagittis malesuada eget a neque.
-
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur ultricies est in lobortis. Nunc tincidunt, ligula ac dapibus finibus, quam ex pharetra sapien, vitae tincidunt ligula massa a orci. Donec vel odio vel nibh blandit lobortis ac vitae neque. Fusce tempor id libero non scelerisque. Integer ultrices, eros nec iaculis ornare, nulla ipsum varius ex, in consectetur mi massa sit amet libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mfus. Proin posuere mauris vel dui venenatis, ac euismod nibh tempor. Mauris non nulla vel lorem iaculis suscipit. Pellentesque tortor urna, fermentum eu feugiat et, auctor non turpis. Sed vitae sem quis tellus sagittis malesuada eget a neque.
+Voor deze opdracht moeten we een brochure voor de tentoonstelling onderkuipsels maken. Deze tentoonstelling nam plaats in het rijksmuseum in Amsterdam. We hebben teksten gekregen die we moeten gebruiken en de bindmethode staat ook vast, maar voor de rest zijn we vrij in keuze qua kleur, formaat en typografie. De bedoeling is dat we tekst en beeld met elkaar combineren op een interessante manier.

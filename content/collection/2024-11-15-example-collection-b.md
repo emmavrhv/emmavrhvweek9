@@ -1,7 +1,7 @@
 ---
 title: Datavisualisaties
 reftags:
-  - Data
+  - Tag 1
 imagegallery:
   showgallery: true
   carouselgrid: carousel
