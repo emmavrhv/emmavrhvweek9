@@ -123,9 +123,9 @@ onMounted(async () => {
 .blur-background {
   position: absolute;
   inset: 0;
-  filter: blur(3px);
-  color:rgba(249, 249, 249, 0.855); 
-  opacity: 0.1;
+  filter: blur(100px);
+  color:rgba(250, 250, 250, 0.855); 
+  opacity: 0 ;
   z-index: -1; /* Ensure blur is behind the text */
 }
 
