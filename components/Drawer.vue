@@ -16,7 +16,7 @@
     :direction="direction"
     :custom-class="'fixed-drawer'"
   >
-    <!-- Drawer content goes here -->
+    <!-- Drawer content -->
     <div class="flex flex-col h-full">
       <div>
         <Titleblock />
@@ -38,23 +38,23 @@
 import { ref } from 'vue'
 import type { DrawerProps } from 'element-plus'
 const drawer = ref(false)
-const direction = ref<DrawerProps['direction']>('ltr')
+const direction = ref<DrawerProps['direction']>('rtl') // Right-to-left direction
 </script>
 
 <style>
 .fixed-drawer {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  right: 0; /* Set drawer to the right */
+  width: 300px; /* Customize width if needed */
+  height: 100%;
   z-index: 1000; /* Ensures it appears on top */
   background-color: #ff0000;
 }
 
 .flex-row {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Button aligned to end (right) */
 }
 
 .flex-row button {
