@@ -60,8 +60,9 @@ onMounted(async () => {
 <template>
   <div>
     <!-- Loading state -->
-    <div v-if="isLoading" class="flex items-center justify-center h-screen">
-      <p>Loading...</p>
+    <div v-if="isLoading" class="flex items-center playfair-display text-red justify-center h-screen">
+      <div class="spinner-icon"></div> <!-- Voeg hier je icoontje toe -->
+      <p class="ml-2">Loading...</p> <!-- Optioneel, kan worden verwijderd -->
     </div>
 
     <!-- Error state -->
