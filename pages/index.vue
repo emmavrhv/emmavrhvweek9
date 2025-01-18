@@ -58,7 +58,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
     <!-- Loading state -->
     <div v-if="isLoading" class="flex items-center playfair-display text-red justify-center h-screen">
       <div class="spinner-icon"></div> <!-- Voeg hier je icoontje toe -->
@@ -71,9 +70,9 @@ onMounted(async () => {
     </div>
 
     <!-- Main content -->
-    <div v-else class="h-screen relative">
+    <div v-else class="relative">
       <!-- Background container -->
-      <div class="relative h-full">
+      <div class="relative h-screen">
         <!-- Background image -->
         <div
           class="absolute inset-0 bg-cover bg-center"
@@ -112,21 +111,61 @@ onMounted(async () => {
         </div>
       </div>
     </div>
+    
+  <!-- Scrollable content with three columns -->
+   <div class="relative bg-red text-#ff0000 p-10">
+     <div class="container mx-auto">
+        <h2 class="text-5xl font-bold mb-6">About Me</h2>
+        <p class="text-lg mb-4">
+          Ik ben Emma Verhoeven, een 19-jarige studente Media & Information Design aan LUCA School of Arts in Brussel. Mijn passie ligt bij grafisch ontwerp en typografie, waarbij ik altijd op zoek ben naar de perfecte balans tussen esthetiek en functionaliteit.
+          Met mijn werk streef ik ernaar om sterke visuele verhalen te creëren die zowel inspireren als communiceren.
+       </p>
+          <p class="text-2xl playfair-display font-bold play mb-10">
+            Skills:
+         </p>
+    
+    <!-- Grid layout for three columns -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Column 1 -->
+      <div class="text-red p-6">
+        <h3 class="text-lg playfair-display"> Adobe Illustrator </h3>
+        <p class="text-lg playfair-display"> 
+          Touchdesigner
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="text-red playfair-display p-6">
+        <h3 class="text-lg playfair-display">Adobe Indesign</h3>
+        <p class="text-lg playfair-display">
+          Adobe XD
+        </p>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="text-red playfair-display p-6">
+        <h3 class="text-lg playfair-display">Adobe Photoshop</h3>
+        <p class="text-lg ">
+          Visual studio code 
+        </p>
+      </div>
+    </div>
   </div>
+</div>
+
 </template>
 
 <style>
 .homepagetitle {
   font-family: 'playfair-display';
 }
- 
+
 .blur-background {
   position: absolute;
   inset: 0;
   filter: blur(100px);
-  color:rgba(250, 250, 250, 0.855); 
-  opacity: 0 ;
+  color: rgba(250, 250, 250, 0.855);
+  opacity: 0;
   z-index: -1; /* Ensure blur is behind the text */
 }
-
 </style>
